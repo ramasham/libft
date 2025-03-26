@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 09:41:02 by rsham             #+#    #+#             */
-/*   Updated: 2024/09/03 15:16:07 by rsham            ###   ########.fr       */
+/*   Updated: 2025/01/08 15:24:35 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *n;
-	t_list *ret;
-	void *new_content;
+	t_list	*n;
+	t_list	*ret;
+	void	*new_content;
 
 	ret = NULL;
 	if (!lst || !f || !del)

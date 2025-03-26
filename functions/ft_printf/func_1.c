@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_write.c                                         :+:      :+:    :+:   */
+/*   func_1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsham <rsham@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 12:41:53 by rsham             #+#    #+#             */
-/*   Updated: 2024/12/08 13:59:36 by rsham            ###   ########.fr       */
+/*   Updated: 2025/01/20 19:38:34 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,30 @@ int	ft_print_char(char c)
 	return (1);
 }
 
-void	ft_print_id(int n)
+int	ft_print_num(int n, char format)
 {
 	long	i;
+	int	count;
 
 	i = n;
-	if (i < 0)
+	count = 0;
+	if (i == 0)
 	{
-		ft_print_char('-');
-		i = -i;
+		count += ft_print_char('0');
+		return (count);
+	}
+	if (format == 'd' || format == 'i')
+	{
+		if (i < 0)
+		{
+			count += ft_print_char('-');
+			i = -i;
+		}
 	}
 	if (i >= 10)
-		ft_print_id(i / 10);
-	ft_print_char((i % 10) + '0');
+		count += ft_print_num(i / 10, format);
+	count += ft_print_char((i % 10) + '0');
+	return (count);
 }
 
 int	ft_print_str(char *c)
@@ -43,29 +54,15 @@ int	ft_print_str(char *c)
 		write(1, "(null)", 6);
 		return (6);
 	}
-	if (c)
+	while (c[i])
 	{
-		while (c[i])
-		{
-			write(1, &c[i], 1);
-			i++;
-		}
+		write(1, &c[i], 1);
+		i++;
 	}
 	return (i);
 }
 
-int	ft_print_uns(unsigned int n)
-{
-	int	i;
-
-	i = 0;
-	if (n >= 10)
-		i += ft_print_uns(n / 10);
-	i += ft_print_char((n % 10) + '0');
-	return (i);
-}
-
-int	ft_printpercent(void)
+int	ft_print_percent(void)
 {
 	write(1, "%", 1);
 	return (1);

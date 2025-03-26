@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 16:16:41 by rsham             #+#    #+#             */
-/*   Updated: 2024/09/03 15:55:55 by rsham            ###   ########.fr       */
+/*   Updated: 2025/02/10 11:58:41 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *tmp_lst;
+	t_list	*tmp_lst;
 
 	if (!new)
 		return ;
@@ -33,3 +33,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		tmp_lst->next = new;
 	}
 }
+
+

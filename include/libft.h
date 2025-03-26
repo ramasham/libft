@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsham <rsham@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:23:08 by rsham             #+#    #+#             */
-/*   Updated: 2024/12/10 18:49:25 by rsham            ###   ########.fr       */
+/*   Updated: 2025/03/27 01:53:17 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,15 @@ void				ft_putstr_fd(char *c, int fd);
 void				ft_putendl_fd(char *c, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strnstr(const char *big, const char *little, \
-size_t len);
+char				*ft_strnstr(const char *big, const char *little,
+						size_t len);
 char				*ft_strdup(const char *s);
-char	            *ft_substr(char *s, unsigned int start, size_t len);
+char				*ft_substr(char *s, unsigned int start, size_t len);
 char				*ft_strjoin_gnl(char *s1, char *s2);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
+char				*ft_strcpy(char *dest, char *src);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
@@ -71,8 +72,12 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstlast(t_list *lst);
 char				*get_next_line(int fd);
-int					ft_strcmp(char *s1, char *s2);
+int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strchr_gnl(char *s, int c);
+char				*ft_strtok(char *str, const char *delim);
+char				**ft_split(char const *s, char c);
+
+
 
 #endif

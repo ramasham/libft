@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:52:31 by rsham             #+#    #+#             */
-/*   Updated: 2024/12/10 19:19:08 by rsham            ###   ########.fr       */
+/*   Updated: 2025/01/08 15:26:12 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strchr_gnl(char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 char	*ft_strjoin_gnl(char *tmp, char *buff)
 {
 	size_t	i;

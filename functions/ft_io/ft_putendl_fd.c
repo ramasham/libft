@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *c, int fd)
+void	ft_putendl_fd(char *c, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (!c)
-       c = 0;
-    while (c[i])
-    {
-        write(fd, &c[i], 1);
-        i++;
-    }
-   write(fd, "\n", 1);
+	i = 0;
+	if (!c)
+		c = 0;
+	while (c[i])
+	{
+		write(fd, &c[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
 /*int main()
 {
-    int fd = 1;
-    char str[] = "rama";
-    ft_putendl_fd(str, fd);
+	int fd = 1;
+	char str[] = "rama";
+	ft_putendl_fd(str, fd);
 }*/
